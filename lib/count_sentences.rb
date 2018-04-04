@@ -15,9 +15,6 @@ class String
   end
 
   def count_sentences
-     sentences = self.split(".")
-     flat_map{ |sentences| sentences.split("!")}.
-     flat_map{ |question| question.split("?")}
-     sentences.count
+    self.split(/[.?!]+/).count
   end
 end
